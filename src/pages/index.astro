@@ -6,6 +6,7 @@ import {
   useTranslatedPath,
 } from '../i18n/utils';
 import languages from '../i18n/languages';
+import BurgerMenu from '../components/burgerMenu.vue';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,6 +14,15 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout title="Welcome to Astro.">
+  <BurgerMenu
+    client:visible
+    links={[
+      { label: 'test1', href: '#' },
+      { label: 'test2', href: '#' },
+      { label: 'test3', href: '#' },
+    ]}
+  />
+
   <p>langue: {lang}</p>
   <p>UI:{t('ui.test')}</p>
   <p>Hero:{t('hero.test')}</p>
