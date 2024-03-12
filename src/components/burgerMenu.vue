@@ -15,6 +15,12 @@
     >
       <div class="w-full flex flex-col justify-between">
         <ul class="text-right" :class="menuItemsState">
+          <div
+            class="absolute -top-96"
+            aria-hidden
+            tabindex="0"
+            @keyup.tab.shift.prevent="goToLastElement()"
+          ></div>
           <li class="mb-6 mt-4">
             <button @click="togglingMenu" ref="closeBtn">
               X
@@ -26,18 +32,14 @@
             :key="href"
             class="border-y border-lighter text-left w-screen py-5"
           >
-            <a
-              :href="href"
-              :ref="links.length - 1 === index ? 'lastElement' : ''"
-              @click="togglingMenu"
-              @focusin="hasLastElementFocus = !hasLastElementFocus"
-              @focusout="hasLastElementFocus = !hasLastElementFocus"
-              @keypress.prevent.tab="
-                links.length - 1 === index ? goToFirstElement() : ''
-              "
-              >{{ label }}</a
-            >
+            <a :href="href" ref="element" @click="togglingMenu">{{ label }}</a>
           </li>
+          <div
+            class="absolute -top-96"
+            aria-hidden
+            tabindex="0"
+            @keyup.prevent.tab="goToFirstElement()"
+          ></div>
         </ul>
       </div>
     </div>
@@ -75,12 +77,11 @@ export default {
       }
     },
     goToFirstElement() {
-      console.log(this.hasLastElementFocus);
-      if (this.hasLastElementFocus) {
-        console.log('allo');
-      }
-
-      /* if (this.$ref.lastElement.hasFocus()) this.$refs.closeBtn.focus(); */
+      this.$refs.closeBtn.focus();
+    },
+    goToLastElement() {
+      console.log('allo');
+      this.$refs.element[this.$refs.element.length - 1].focus();
     },
   },
 };
