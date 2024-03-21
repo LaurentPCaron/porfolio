@@ -1,8 +1,9 @@
 <template>
   <div>
-    <button @click="togglingMenu">
-      OUVRIR
-      <!--   <font-awesome-icon icon="fa-solid fa-bars" class="text-4xl text-white" /> -->
+    <button class="w-10 aspect-square" @click="togglingMenu">
+      <i
+        class="fa fa-solid fa-bars block text-5xl text-white w-10 aspect-square"
+      ></i>
     </button>
     <div
       class="absolute top-0 right-0 transition-colors duration-700"
@@ -10,7 +11,7 @@
       @[isOpen&&`click`]="togglingMenu"
     ></div>
     <div
-      class="flex justify-end pr-10 bg-dark fixed top-0 right-0 h-screen w-full transition-all duration-700"
+      class="flex justify-end pr-10 bg-brown fixed top-0 right-0 h-screen w-full transition-all duration-700"
       :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
     >
       <div class="w-full flex flex-col justify-between">
@@ -22,9 +23,14 @@
             @keyup.tab.shift.prevent="goToLastElement()"
           ></div>
           <li class="mb-6 mt-4">
-            <button @click="togglingMenu" ref="closeBtn">
-              X
-              <!--  <font-awesome-icon icon="fa-solid fa-xmark" /> -->
+            <button
+              class="w-10 aspect-square z-20"
+              @click="togglingMenu"
+              ref="closeBtn"
+            >
+              <i
+                class="fa fa-solid fa-x block text-5xl text-white w-10 aspect-square"
+              ></i>
             </button>
           </li>
           <li

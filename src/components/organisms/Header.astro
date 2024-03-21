@@ -1,0 +1,19 @@
+---
+import BurgerMenu from '../molecules/BurgerMenu.vue';
+---
+
+<header>
+  <img
+    src="https://www.trashedgraphics.com/wp-content/uploads/2012/02/default_icon-778x584.jpg"
+    alt=""
+  />
+  <template> </template>
+  <BurgerMenu
+    client:visible
+    links={[
+      { label: 'test1', href: '#' },
+      { label: 'test2', href: '#' },
+      { label: 'test3', href: '#' },
+    ]}
+  />
+</header>
