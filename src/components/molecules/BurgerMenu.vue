@@ -14,7 +14,7 @@
       class="flex justify-end pr-10 bg-brown fixed top-0 right-0 h-screen w-full transition-all duration-700"
       :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
     >
-      <div class="w-full flex flex-col justify-between">
+      <div class="w-full flex flex-col">
         <ul class="text-right" :class="menuItemsState">
           <div
             class="absolute -top-96"
@@ -34,19 +34,34 @@
             </button>
           </li>
           <li
-            v-for="({ href, label }, index) in links"
+            v-for="{ href, label } in internals"
             :key="href"
-            class="border-y border-lighter text-left w-screen py-5"
+            class="border-y border-lighter text-left w-screen"
           >
-            <a :href="href" ref="element" @click="togglingMenu">{{ label }}</a>
+            <a class="py-5 pl-5" :href="href" @click="togglingMenu">{{
+              label
+            }}</a>
           </li>
-          <div
-            class="absolute -top-96"
-            aria-hidden
-            tabindex="0"
-            @keyup.prevent.tab="goToFirstElement()"
-          ></div>
         </ul>
+        <ul class="mt-5 pl-5 flex gap-7 text-3xl">
+          <li v-for="{ href, label, icon } in externals" :key="href">
+            <a
+              :href="href"
+              target="_blank"
+              rel="noopener noreferrer"
+              :title="label"
+              ref="element"
+              ><i :class="icon"></i
+            ></a>
+          </li>
+        </ul>
+
+        <div
+          class="absolute -top-96"
+          aria-hidden
+          tabindex="0"
+          @keyup.prevent.tab="goToFirstElement()"
+        ></div>
       </div>
     </div>
   </div>
@@ -63,7 +78,7 @@ export default {
       backgroundState: '-z-10',
     };
   },
-  props: ['links'],
+  props: ['internals', 'externals'],
   watch: {
     isOpen(isOpen) {
       if (!isOpen) {
@@ -86,7 +101,6 @@ export default {
       this.$refs.closeBtn.focus();
     },
     goToLastElement() {
-      console.log('allo');
       this.$refs.element[this.$refs.element.length - 1].focus();
     },
   },
@@ -95,7 +109,7 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  @apply w-screen h-full  pl-5 flex items-center;
+  @apply h-full  flex items-center;
 }
 li {
   @apply text-4xl;

@@ -1,0 +1,7 @@
+{
+  "internal": [
+    { "label": "Projets", "href": "#projects" },
+    { " label": "À propos de moi", "href": "#about" },
+    { "label": "Me contacter", " href": "#contact" }
+  ]
+}

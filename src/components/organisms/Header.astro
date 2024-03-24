@@ -1,19 +1,41 @@
 ---
 import BurgerMenu from '../molecules/BurgerMenu.vue';
+import Nav from '../molecules/Nav.astro';
+
+const nav = {
+  internal: [
+    { label: 'Projets', href: '#projects' },
+    { label: 'À propos de moi', href: '#about' },
+    { label: 'Me contacter', href: '#contact' },
+  ],
+  external: [
+    { label: 'LinkedIn', href: '#projects', icon: 'fa-brands fa-linkedin-in' },
+    { label: 'Git Hub', href: '#about', icon: 'fa-brands fa-github' },
+    { label: 'Couriel ', href: '#contact', icon: 'fa-solid fa-envelope' },
+  ],
+};
 ---
 
-<header class="h-12 flex justify-between mx-4">
-  <img
-    src="https://www.trashedgraphics.com/wp-content/uploads/2012/02/default_icon-778x584.jpg"
-    alt=""
-  />
-  <template> </template>
-  <BurgerMenu
-    client:visible
-    links={[
-      { label: 'test1', href: '#' },
-      { label: 'test2', href: '#' },
-      { label: 'test3', href: '#' },
-    ]}
-  />
+<header class="bg-black bg-opacity-75 w-full px-4 py-2 fixed top-0 text-white">
+  <nav class="h-full flex justify-between items-center container mx-auto">
+    <div class="flex items-center w-full gap-5">
+      <a class="flex items-center gap-5" href="#">
+        <img
+          class="h-10"
+          src="https://www.trashedgraphics.com/wp-content/uploads/2012/02/default_icon-778x584.jpg"
+          alt=""
+        />
+        <p class="hidden md:block">Laurent-Philippe Caron</p>
+      </a>
+
+      <Nav class="hidden md:block" nav={nav.internal} />
+      <Nav class="hidden md:block ml-auto" nav={nav.external} />
+      <BurgerMenu
+        class="md:hidden ml-auto"
+        client:visible
+        internals={nav.internal}
+        externals={nav.external}
+      />
+    </div>
+  </nav>
 </header>
