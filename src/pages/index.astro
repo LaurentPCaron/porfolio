@@ -15,8 +15,11 @@ const translatePath = useTranslatedPath(lang);
 
 <Layout title="Welcome to Astro.">
   <Header />
+  <div class="overflow-hidden">
+    <div class="bg-image h-screen bg-fixed"></div>
+  </div>
 
-  <p>langue: {lang}</p>
+  <!-- <p>langue: {lang}</p>
   <p>UI:{t('ui.test')}</p>
   <p>Hero:{t('hero.test')}</p>
 
@@ -28,11 +31,22 @@ const translatePath = useTranslatedPath(lang);
         </li>
       ))
     }
-  </ul>
+  </ul> -->
 </Layout>
 
-<style>
-  * {
-    color: white;
+<style lang="scss" scoped>
+  .bg-image {
+    width: 5760px;
+    background: url('../img/hero-bg.png') repeat-x;
+    animation: slide-bg 60s linear infinite;
+  }
+
+  @keyframes slide-bg {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1920px, 0, 0);
+    }
   }
 </style>
