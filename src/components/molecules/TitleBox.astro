@@ -9,14 +9,14 @@ const { class: className } = Astro.props;
 
 <div class={className}>
   <div
-    class="text-shadow flex flex-col justify-center bg-[#DE421C] border-black border-t-orange-300 border-l-orange-300 border-4 text-orange-300 p-3"
+    class="text-shadow flex flex-col justify-between bg-[#DE421C] border-black border-t-orange-300 border-l-orange-300 border-4 text-orange-300 p-3 min-h-96"
   >
     <div class="flex justify-between">
       <span class="square"></span>
       <span class="square"></span>
     </div>
-    <p class="text-5xl md:text-5xl">Laurent-Philippe Caron</p>
-    <p class="text-7xl md:text-8xl" set:html={t('hero.titreEmploie')} />
+    <p class="text-6xl md:text-6xl">Laurent-Philippe Caron</p>
+    <p class="text-8xl md:text-9xl" set:html={t('hero.titreEmploie')} />
     <div class="flex justify-between">
       <span class="square"></span>
       <span class="square"></span>

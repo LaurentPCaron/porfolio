@@ -1,3 +1,7 @@
+---
+const { class: className } = Astro.props;
+---
+
 <script>
   const clockElelment = document.querySelector('#clock');
   setInterval(() => {
@@ -11,7 +15,7 @@
   }, 1000);
 </script>
 
-<div class="mt-10 w-full md:w-[55%] grid grid-cols-4 grid-rows-2 md:text-2xl">
+<div class=`grid grid-cols-4 grid-rows-2 md:text-2xl text-white ${className}`>
   <p>Laurent-P.</p>
   <p class="col-start-3 text-center">World</p>
   <p class="justify-self-end">Time</p>
@@ -35,7 +39,7 @@
 <style lang="scss">
   .cafe-shadow {
     text-shadow: 2px 2px black;
-    animation: color-transition 1.5s linear infinite alternate;
+    animation: color-transition 1s linear infinite alternate;
   }
   @keyframes color-transition {
     0% {
