@@ -6,6 +6,8 @@ import {
   useTranslatedPath,
 } from '../../i18n/utils';
 import languages from '../../i18n/languages';
+import Header from '../../components/organisms/Header.astro';
+import Hero from '../../components/organisms/Hero.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,7 +15,10 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout title="Welcome to Astro.">
-  <p>langue: {lang}</p>
+  <Header />
+  <Hero />
+
+  <!-- <p>langue: {lang}</p>
   <p>UI:{t('ui.test')}</p>
   <p>Hero:{t('hero.test')}</p>
 
@@ -25,11 +30,7 @@ const translatePath = useTranslatedPath(lang);
         </li>
       ))
     }
-  </ul>
+  </ul> -->
 </Layout>
 
-<style>
-  * {
-    color: white;
-  }
-</style>
+<style lang="scss" scoped></style>

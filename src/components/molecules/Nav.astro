@@ -2,7 +2,7 @@
 
 interface Props {
   nav: {
-     label: string, href: string, icon?:string;
+     label: string, href: string, icon?:string, haveSeparator?:boolean
   }[];
   class: string
 }
@@ -14,14 +14,13 @@ const { nav, class: className} = Astro.props;
   <ul class="flex gap-5">
   
     {
-      nav.map(({ href, label, icon }) => (
+      nav.map(({ href, label, icon, haveSeparator }) => (
         <li>
          { icon ?
           <a href={href} target="_blank" rel="noopener noreferrer" title={label}><i class={icon}></i></a>
           : <a href={href}>{label}</a>
         }
-  
-  
+        { haveSeparator && <span aria-hidden>|</span>}
         </li>
       ))
     }

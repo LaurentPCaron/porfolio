@@ -1,0 +1,48 @@
+<script>
+  const clockElelment = document.querySelector('#clock');
+  setInterval(() => {
+    const getTimeNow = new Date();
+    clockElelment!.innerHTML = getTimeNow.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+    });
+  }, 1000);
+</script>
+
+<div class="mt-10 w-full md:w-[55%] grid grid-cols-4 grid-rows-2 md:text-2xl">
+  <p>Laurent-P.</p>
+  <p class="col-start-3 text-center">World</p>
+  <p class="justify-self-end">Time</p>
+  <p>000000</p>
+  <p class="text-center">
+    <i class="fa-solid fa-mug-hot cafe-shadow text-[#DE421C] mr-1"></i>x5
+  </p>
+  <p class="text-center">1-1</p>
+  <p id="clock" class="justify-self-end">
+    {
+      new Date().toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+      })
+    }
+  </p>
+</div>
+
+<style lang="scss">
+  .cafe-shadow {
+    text-shadow: 2px 2px black;
+    animation: color-transition 1.5s linear infinite alternate;
+  }
+  @keyframes color-transition {
+    0% {
+      @apply text-[#DE421C];
+    }
+    100% {
+      @apply text-orange-300;
+    }
+  }
+</style>

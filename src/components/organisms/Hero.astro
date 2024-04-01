@@ -1,0 +1,42 @@
+---
+import TitleBox from '../molecules/TitleBox.astro';
+import Score from './Score.astro';
+---
+
+<div class="relative overflow-hidden mt-14 h-[calc(100vh-3.5rem)] font-pixel">
+  <div class="bg-image h-full bg-fixed"></div>
+
+  <div class="absolute w-full h-full top-0 flex flex-col justify-between">
+    <!--Rectangle de carré -->
+    <div class="w-full flex items-center flex-col">
+      <Score />
+      <TitleBox class="md:w-10/12 lg:w-6/12" />
+    </div>
+    <!-- Appel à l'action -->
+    <a
+      class="w-fit text-center mx-auto flex flex-col justify-center text-white mb-14 text-5xl"
+      href="#"
+    >
+      <span class="underline">Start</span>
+      <span class="mt-2 animate-bounce"
+        ><i class="fa-solid fa-angle-down"></i></span
+      >
+    </a>
+  </div>
+</div>
+<style lang="scss" scoped>
+  .bg-image {
+    width: 5760px;
+    background: url('../../img/hero-bg.png') repeat-x;
+    animation: slide-bg 60s linear infinite;
+  }
+
+  @keyframes slide-bg {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1920px, 0, 0);
+    }
+  }
+</style>

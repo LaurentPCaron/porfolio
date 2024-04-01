@@ -6,6 +6,9 @@ export default {
       colors: {
         brown: '#3C2A21',
       },
+      fontFamily: {
+        pixel: ['"VT323"'],
+      },
     },
   },
   plugins: [],

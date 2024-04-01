@@ -1,0 +1,37 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { class: className } = Astro.props;
+---
+
+<div class={className}>
+  <div
+    class="text-shadow flex flex-col justify-center bg-[#DE421C] border-black border-t-orange-300 border-l-orange-300 border-4 text-orange-300 p-3"
+  >
+    <div class="flex justify-between">
+      <span class="square"></span>
+      <span class="square"></span>
+    </div>
+    <p class="text-5xl md:text-5xl">Laurent-Philippe Caron</p>
+    <p class="text-7xl md:text-8xl" set:html={t('hero.titreEmploie')} />
+    <div class="flex justify-between">
+      <span class="square"></span>
+      <span class="square"></span>
+    </div>
+  </div>
+  <p class="text-2xl place-content-start w-full text-end text-white">
+    ©{new Date().getFullYear()} Laurent-P. Caron
+  </p>
+</div>
+
+<style lang="scss">
+  .text-shadow {
+    text-shadow: 0px 5px black;
+  }
+  .square {
+    @apply w-2 h-2 block bg-[#DE421C] border-black border-t-orange-300 border-l-orange-300 border-4;
+  }
+</style>

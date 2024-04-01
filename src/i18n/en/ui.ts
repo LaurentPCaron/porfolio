@@ -1,3 +1,7 @@
 export default {
-  test: 'test ui en',
+  projets: 'Projects',
+  about: 'About me',
+  contact: 'Contact me',
+  francais: 'French',
+  english: 'English',
 };

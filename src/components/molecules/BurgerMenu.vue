@@ -44,15 +44,23 @@
           </li>
         </ul>
         <ul class="mt-5 pl-5 flex gap-7 text-3xl">
-          <li v-for="{ href, label, icon } in externals" :key="href">
+          <li
+            class="flex"
+            v-for="{ href, label, icon, haveSeparator } in externals"
+            :key="href"
+          >
             <a
               :href="href"
               target="_blank"
               rel="noopener noreferrer"
               :title="label"
               ref="element"
-              ><i :class="icon"></i
-            ></a>
+              ><i v-if="icon" :class="icon"></i>
+              <span v-else>{{ label }}</span></a
+            >
+            <span v-if="haveSeparator" class="ml-5 -mt-2" aria-hidden=""
+              >|</span
+            >
           </li>
         </ul>
 
