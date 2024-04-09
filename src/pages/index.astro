@@ -2,50 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/organisms/Header.astro';
 import Hero from '../components/organisms/Hero.astro';
+import Projects from '../components/organisms/Projects.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
   <Hero />
-
-  <div class="container mx-auto">
-    <div
-      class="w-10/12 aspect-[5/1] bg-pink-400 flex overflow-hidden rounded-md shadow-md"
-    >
-      <!--Image -->
-      <div class="-skew-x-12 overflow-hidden w-5/12 -ml-[2%] mr-10">
-        <img
-          class="skew-x-12 w-full object-cover scale-[125%]"
-          src="https://images.unsplash.com/photo-1545956146-d70420cd4320?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-      </div>
-
-      <!--Content -->
-      <div>
-        <div class="flex">
-          <div class="tag">Lorem ipsum</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Projects />
+  import Tag from '../components/atoms/Tag.astro';
 </Layout>
 
-<style lang="scss" scoped>
-  .tag {
-    position: relative;
-    padding: 0.25rem 1rem 0.25rem 1.25rem;
-    background: gray;
-    &::after {
-      position: absolute;
-      content: '';
-      aspect-ratio: 1/1;
-      height: 100%;
-      top: 0;
-      left: 100%;
-      background: gray;
-      right: 10px;
-      clip-path: polygon(0% 100%, 0% 0%, 50% 50%);
-    }
-  }
-</style>
+<style lang="scss" scoped></style>

@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: white;
+}
+
+h3 {
+  @apply text-3xl font-bold;
+}
