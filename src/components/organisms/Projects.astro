@@ -1,8 +1,16 @@
 ---
-import Tag from '../atoms/Tag.astro';
 import Card from '../molecules/Card.astro';
+import { getCollection } from 'astro:content';
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+const allBlogPosts = await getCollection('projects', ({ id }) => {
+  return id.startsWith(`${lang}/`);
+});
 ---
 
+{allBlogPosts.map(({ data }) => <p class="text-black">{data.title}</p>)}
 <div class="container mx-auto grid grid-cols-1 gap-5">
   <Card />
   <Card />
