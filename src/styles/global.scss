@@ -7,10 +7,24 @@ html {
 	background: #000;
 }
 
+h1,
+h2,
+h3,
+h4 {
+	@apply font-pixel font-bold;
+}
+
 h2 {
-	@apply text-5xl font-bold;
+	@apply py-5 text-5xl;
 }
 
 h3 {
 	@apply text-3xl font-bold;
+}
+
+a:not([class]) {
+	@apply border-b-2 border-transparent;
+	&:hover {
+		@apply border-current;
+	}
 }
