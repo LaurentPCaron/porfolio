@@ -1,37 +1,37 @@
 ---
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
-const { class: className } = Astro.props;
+const { class: className } = Astro.props
 ---
 
 <div class={className}>
-  <div
-    class="text-shadow flex flex-col justify-between bg-[#DE421C] border-black border-t-orange-300 border-l-orange-300 border-4 text-orange-300 p-3 min-h-96"
-  >
-    <div class="flex justify-between">
-      <span class="square"></span>
-      <span class="square"></span>
-    </div>
-    <p class="text-6xl md:text-6xl">Laurent-Philippe Caron</p>
-    <p class="text-8xl md:text-9xl" set:html={t('hero.titreEmploie')} />
-    <div class="flex justify-between">
-      <span class="square"></span>
-      <span class="square"></span>
-    </div>
-  </div>
-  <p class="text-2xl place-content-start w-full text-end text-white">
-    ©{new Date().getFullYear()} Laurent-P. Caron
-  </p>
+	<div
+		class="text-shadow flex min-h-96 flex-col justify-between border-4 border-black border-l-orange-300 border-t-orange-300 bg-[#DE421C] p-3 text-orange-300"
+	>
+		<div class="flex justify-between">
+			<span class="square"></span>
+			<span class="square"></span>
+		</div>
+		<p class="text-6xl md:text-6xl">Laurent-Philippe Caron</p>
+		<p class="text-8xl md:text-9xl" set:html={t('hero.titreEmploie')} />
+		<div class="flex justify-between">
+			<span class="square"></span>
+			<span class="square"></span>
+		</div>
+	</div>
+	<p class="w-full place-content-start text-end text-2xl text-white">
+		©{new Date().getFullYear()} Laurent-P. Caron
+	</p>
 </div>
 
 <style lang="scss">
-  .text-shadow {
-    text-shadow: 0px 5px black;
-  }
-  .square {
-    @apply w-2 h-2 block bg-[#DE421C] border-black border-t-orange-300 border-l-orange-300 border-4;
-  }
+	.text-shadow {
+		text-shadow: 0px 5px black;
+	}
+	.square {
+		@apply block h-2 w-2 border-4 border-black border-l-orange-300 border-t-orange-300 bg-[#DE421C];
+	}
 </style>

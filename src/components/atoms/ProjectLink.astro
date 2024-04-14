@@ -1,0 +1,36 @@
+---
+import { eType } from '../../types/IProjectLinkIcon'
+
+interface Props {
+	url: string
+	type: eType
+}
+let icon: string, label: string
+
+const { url, type } = Astro.props
+
+switch (type) {
+	case eType.code:
+		icon = 'fa-brands fa-github'
+		label = 'Code'
+		break
+	case eType.url:
+		icon = 'fa-solid fa-link'
+		label = 'Visiter'
+		break
+	case eType.more:
+		icon = 'fa-solid fa-circle-info'
+		label = "Plus d'info"
+		break
+
+	default:
+		icon = 'fa-solid fa-triangle-exclamation'
+		label = 'Erreur'
+		break
+}
+---
+
+<a href={url}>
+	<i class={icon}></i>
+	{label}
+</a>

@@ -1,43 +1,41 @@
 ---
-import TitleBox from '../molecules/TitleBox.astro';
-import Score from './Score.astro';
+import TitleBox from '../molecules/TitleBox.astro'
+import Score from './Score.astro'
 ---
 
-<div class="relative overflow-hidden mt-14 h-[calc(100vh-3.5rem)] font-pixel">
-  <!-- Animation -->
-  <div class="bg-image h-full bg-fixed"></div>
+<div class="relative mt-14 h-[calc(100vh-3.5rem)] overflow-hidden font-pixel">
+	<!-- Animation -->
+	<div class="bg-image h-full bg-fixed"></div>
 
-  <div class="absolute w-full h-full top-0 flex flex-col justify-between">
-    <!--Rectangle de carré -->
-    <div class="w-full flex items-center flex-col">
-      <Score class="mt-10 w-full md:w-[55%] max-w-[60rem]" />
-      <TitleBox class="md:w-10/12 lg:w-6/12 max-w-4xl" />
-    </div>
-    <!-- Appel à l'action -->
-    <a
-      class="w-fit text-center mx-auto flex flex-col justify-center text-white mb-14 text-5xl"
-      href="#"
-    >
-      <span class="underline">Start</span>
-      <span class="mt-2 animate-bounce"
-        ><i class="fa-solid fa-angle-down"></i></span
-      >
-    </a>
-  </div>
+	<div class="absolute top-0 flex h-full w-full flex-col justify-between">
+		<!--Rectangle de carré -->
+		<div class="flex w-full flex-col items-center">
+			<Score class="mt-10 w-full max-w-[60rem] md:w-[55%]" />
+			<TitleBox class="max-w-4xl md:w-10/12 lg:w-6/12" />
+		</div>
+		<!-- Appel à l'action -->
+		<a
+			class="mx-auto mb-14 flex w-fit flex-col justify-center text-center text-5xl text-white"
+			href="#"
+		>
+			<span class="underline">Start</span>
+			<span class="mt-2 animate-bounce"><i class="fa-solid fa-angle-down"></i></span>
+		</a>
+	</div>
 </div>
 <style lang="scss" scoped>
-  .bg-image {
-    width: 5760px;
-    background: url('../../img/hero-bg.png') repeat-x;
-    animation: slide-bg 60s linear infinite;
-  }
+	.bg-image {
+		width: 5760px;
+		background: url('../../img/hero-bg.png') repeat-x;
+		animation: slide-bg 60s linear infinite;
+	}
 
-  @keyframes slide-bg {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-1920px, 0, 0);
-    }
-  }
+	@keyframes slide-bg {
+		0% {
+			transform: translate3d(0, 0, 0);
+		}
+		100% {
+			transform: translate3d(-1920px, 0, 0);
+		}
+	}
 </style>

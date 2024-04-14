@@ -1,53 +1,49 @@
 ---
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from '../../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils'
 
-import BurgerMenu from '../molecules/BurgerMenu.vue';
-import Nav from '../molecules/Nav.astro';
+import BurgerMenu from '../molecules/BurgerMenu.vue'
+import Nav from '../molecules/Nav.astro'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
 
 const nav = {
-  internal: [
-    { label: t('ui.projets'), href: '#projects' },
-    { label: t('ui.about'), href: '#about' },
-    { label: t('ui.contact'), href: '#contact' },
-  ],
-  external: [
-    { label: 'LinkedIn', href: '#projects', icon: 'fa-brands fa-linkedin-in' },
-    { label: 'Git Hub', href: '#about', icon: 'fa-brands fa-github' },
-    { label: 'Couriel ', href: '#contact', icon: 'fa-solid fa-envelope' },
-    { label: 'Fr', href: translatePath('/', 'fr'), haveSeparator: true },
-    { label: 'En', href: translatePath('/', 'en') },
-  ],
-};
+	internal: [
+		{ label: t('ui.projets'), href: '#projects' },
+		{ label: t('ui.about'), href: '#about' },
+		{ label: t('ui.contact'), href: '#contact' }
+	],
+	external: [
+		{ label: 'LinkedIn', href: '#projects', icon: 'fa-brands fa-linkedin-in' },
+		{ label: 'Git Hub', href: '#about', icon: 'fa-brands fa-github' },
+		{ label: 'Couriel ', href: '#contact', icon: 'fa-solid fa-envelope' },
+		{ label: 'Fr', href: translatePath('/', 'fr'), haveSeparator: true },
+		{ label: 'En', href: translatePath('/', 'en') }
+	]
+}
 ---
 
-<header class="bg-black w-full h-14 px-4 py-2 fixed top-0 text-white z-10">
-  <nav class="h-full flex justify-between items-center container mx-auto">
-    <div class="flex items-center w-full gap-5">
-      <a class="flex items-center gap-5" href="#">
-        <img
-          class="h-10"
-          src="https://www.trashedgraphics.com/wp-content/uploads/2012/02/default_icon-778x584.jpg"
-          alt=""
-        />
-        <p class="hidden md:block">Laurent-Philippe Caron</p>
-      </a>
+<header class="fixed top-0 z-10 h-14 w-full bg-black px-4 py-2 text-white">
+	<nav class="container mx-auto flex h-full items-center justify-between">
+		<div class="flex w-full items-center gap-5">
+			<a class="flex items-center gap-5" href="#">
+				<img
+					class="h-10"
+					src="https://www.trashedgraphics.com/wp-content/uploads/2012/02/default_icon-778x584.jpg"
+					alt=""
+				/>
+				<p class="hidden md:block">Laurent-Philippe Caron</p>
+			</a>
 
-      <Nav class="hidden md:block" nav={nav.internal} />
-      <Nav class="hidden md:block ml-auto" nav={nav.external} />
-      <BurgerMenu
-        class="md:hidden ml-auto"
-        client:visible
-        internals={nav.internal}
-        externals={nav.external}
-      />
-    </div>
-  </nav>
+			<Nav class="hidden md:block" nav={nav.internal} />
+			<Nav class="ml-auto hidden md:block" nav={nav.external} />
+			<BurgerMenu
+				class="ml-auto md:hidden"
+				client:visible
+				internals={nav.internal}
+				externals={nav.external}
+			/>
+		</div>
+	</nav>
 </header>

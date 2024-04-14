@@ -1,11 +1,14 @@
 ---
 title: Projet Fr
+image: https://picsum.photos/200/300
 links: [
-{ type: direct, url: google.com },
+{ type: url, url: google.com },
 { type: code, url: github.com }
 ]
 technologies: [html, css, astro]
 ---
+
+# Title
 
 FR Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
 tempore facere quia eos asperiores quam reprehenderit reiciendis minus

@@ -1,19 +1,36 @@
 ---
-import Card from '../molecules/Card.astro';
-import { getCollection } from 'astro:content';
-import { getLangFromUrl } from '../../i18n/utils';
+import Card from '../molecules/Card.astro'
+import { getCollection } from 'astro:content'
+import { getLangFromUrl } from '../../i18n/utils'
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url)
 
 const allBlogPosts = await getCollection('projects', ({ id }) => {
-  return id.startsWith(`${lang}/`);
-});
+	return id.startsWith(`${lang}/`)
+})
 ---
 
-{allBlogPosts.map(({ data }) => <p class="text-black">{data.title}</p>)}
-<div class="container mx-auto grid grid-cols-1 gap-5">
-  <Card />
-  <Card />
+<div class="container mx-auto">
+	<h2>Mes projets</h2>
+
+	<div class="grid grid-cols-1 gap-5">
+		{
+			allBlogPosts.map(({ data, render }) => {
+				const x = async () => {
+					return await (
+						<Card
+							Content={(await render()).Content}
+							image={data.image}
+							links={data.links}
+							technologies={data.technologies}
+							title={data.title}
+						/>
+					)
+				}
+				return x
+			})
+		}
+	</div>
 </div>
 
 <!-- -->

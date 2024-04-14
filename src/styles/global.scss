@@ -1,11 +1,16 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  color: white;
+	color: white;
+	background: #000;
+}
+
+h2 {
+	@apply text-5xl font-bold;
 }
 
 h3 {
-  @apply text-3xl font-bold;
+	@apply text-3xl font-bold;
 }
