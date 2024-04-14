@@ -6,5 +6,6 @@ links:
   url: www.google.com
 technologies:
   - HTML
+  - JS
 ---
 ALLLO
