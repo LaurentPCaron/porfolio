@@ -45,7 +45,7 @@ const { title, image, links, technologies, Content } = Astro.props
 		.card .trapeze {
 			clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 85% 100%);
 		}
-		.card:nth-child(2) .trapeze {
+		.card:nth-child(2n) .trapeze {
 			order: 1;
 			clip-path: polygon(0% 100%, 15% 0%, 100% 0%, 100% 100%);
 		}
