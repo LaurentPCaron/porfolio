@@ -1,11 +1,15 @@
 ---
 title: Projet Fr
 image: https://picsum.photos/200/300
-links: [
-{ type: url, url: google.com },
-{ type: code, url: github.com }
-]
-technologies: [html, css, astro]
+links:
+  - type: url
+    url: www.google.com
+  - type: code
+    url: ww.github.com
+technologies:
+  - html
+  - css
+  - astro
 ---
 
 # Title
