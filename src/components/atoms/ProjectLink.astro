@@ -1,10 +1,15 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
 import { eType } from '../../types/IProjectLinkIcon'
 
 interface Props {
 	url: string
 	type: eType
 }
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
 let icon: string, label: string
 
 const { url, type } = Astro.props
@@ -12,15 +17,15 @@ const { url, type } = Astro.props
 switch (type) {
 	case eType.code:
 		icon = 'fa-brands fa-github'
-		label = 'Code'
+		label = t('ui.voirCode')
 		break
 	case eType.url:
 		icon = 'fa-solid fa-link'
-		label = 'Visiter'
+		label = t('ui.voirSite')
 		break
 	case eType.more:
 		icon = 'fa-solid fa-circle-info'
-		label = "Plus d'info"
+		label = t('ui.voirPlus')
 		break
 
 	default:

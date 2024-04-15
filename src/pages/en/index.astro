@@ -1,36 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from '../../i18n/utils';
-import languages from '../../i18n/languages';
-import Header from '../../components/organisms/Header.astro';
-import Hero from '../../components/organisms/Hero.astro';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/organisms/Header.astro'
+import Hero from '../../components/organisms/Hero.astro'
+import Projects from '../../components/organisms/Projects.astro'
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header />
-  <Hero />
-
-  <!-- <p>langue: {lang}</p>
-  <p>UI:{t('ui.test')}</p>
-  <p>Hero:{t('hero.test')}</p>
-
-  <ul>
-    {
-      Object.entries(languages).map(([lang, label]) => (
-        <li>
-          <a href={translatePath('/', lang)}>{label}</a>
-        </li>
-      ))
-    }
-  </ul> -->
+	<Header />
+	<Hero />
+	<Projects />
 </Layout>
 
 <style lang="scss" scoped></style>
