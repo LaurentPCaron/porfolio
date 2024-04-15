@@ -1,13 +1,20 @@
 ---
-title: Projet En
-image: https://randomwordgenerator.com/img/picture-generator/52e8dd4a4954a914f1dc8460962e33791c3ad6e04e507749772f79dd9e49cd_640.jpg
-links: [
-{ type: url, url: google.com },
-{ type: code, url: github.com }]
-technologies: [html, css, astro]
+title: Projet Fr
+image: https://picsum.photos/200/300
+links:
+  - type: url
+    url: www.google.com
+  - type: code
+    url: ww.github.com
+technologies:
+  - html
+  - css
+  - astro
 ---
 
-EN Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+# Title
+
+FR Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
 tempore facere quia eos asperiores quam reprehenderit reiciendis minus
 labore, animi sit itaque facilis dolorum enim? Deleniti, porro natus!
 Facere, sit. Cumque, modi voluptatum. Assumenda ea, in optio iste

@@ -1,8 +1,13 @@
+i18n:
+  structure: multiple_folders
+  locales: [fr, en]
+
 collections:
   - name: 'projects-fr' # Used in routes, e.g., /admin/collections/blog
     label: 'Projets' # Used in the UI
-    folder: 'src/content/projects/fr' # The path to the folder where the documents are stored
+    folder: 'src/content/projects' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    i18n: true
     fields:
       - label: 'Titre'
         name: 'title'
@@ -12,7 +17,7 @@ collections:
         widget: 'image'
       - label: 'Liens'
         name: 'links'
-        summary: '{{fields.type}}:{{fields.url}}'
+        summary: '{{fields.type}} {{fields.url}}'
         widget: 'list'
         fields:
           - label: 'Type'
