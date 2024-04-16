@@ -1,5 +1,5 @@
 ---
-title: Projet Fr
+title: Online Porfolio for Endless Fantasy Art
 image: https://picsum.photos/200/300
 links:
   - type: url

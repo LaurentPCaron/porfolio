@@ -1,15 +1,17 @@
 ---
-title: Projet Fr
-image: https://picsum.photos/200/300
+title: "Porfolio en ligne pour Endless Fantasy Art "
+image: src/img/thumbnail-endless-fantasy-art.png
 links:
   - type: url
-    url: www.google.com
+    url: https://www.endless-fantasy-art.com/
   - type: code
-    url: ww.github.com
+    url: https://github.com/LaurentPCaron/endless-fantasy
 technologies:
-  - html
-  - css
-  - astro
+  - Astro
+  - Vue
+  - Sass
+  - Tailwind
+  - Amazon S3
 ---
 
 # Title
