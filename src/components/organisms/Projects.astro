@@ -13,7 +13,7 @@ const allBlogPosts = await getCollection('projects', ({ id }) => {
 <div class="container mx-auto">
 	<h2 class="ml-2 md:m-0">Mes projets</h2>
 
-	<div class="grid grid-cols-1 gap-5">
+	<div class="grid grid-cols-1 gap-16">
 		{
 			allBlogPosts.map(({ data, render }) => {
 				const x = async () => {
