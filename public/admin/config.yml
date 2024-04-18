@@ -6,6 +6,8 @@ collections:
   - name: 'projects-fr' # Used in routes, e.g., /admin/collections/blog
     label: 'Projets' # Used in the UI
     folder: 'src/content/projects' # The path to the folder where the documents are stored
+    media_folder: 'src/img/projects'
+    public_folder: 'src/img/projects'
     create: true # Allow users to create new documents in this collection
     i18n: true
     fields:
@@ -16,10 +18,12 @@ collections:
       - label: 'Image'
         name: 'image'
         widget: 'image'
+        i18n: true
       - label: 'Liens'
         name: 'links'
         summary: '{{fields.type}} {{fields.url}}'
         widget: 'list'
+        i18n: true
         fields:
           - label: 'Type'
             name: 'type'
@@ -37,7 +41,7 @@ collections:
       - label: 'Technologies'
         name: 'technologies'
         widget: 'list'
-
+        i18n: true
       - label: 'Body'
         i18n: true
         name: 'body'
