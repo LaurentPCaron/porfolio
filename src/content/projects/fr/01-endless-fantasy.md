@@ -1,6 +1,6 @@
 ---
-title: 'Porfolio en ligne pour Endless Fantasy Art '
-image: src/img/projects/thumbnail-endless-fantasy-art.png
+title: "Porfolio en ligne pour Endless Fantasy Art "
+image: src/img/projects/mountain-1920x080-national-park-wallpaper-preview.jpg
 links:
   - type: url
     url: https://www.endless-fantasy-art.com/
