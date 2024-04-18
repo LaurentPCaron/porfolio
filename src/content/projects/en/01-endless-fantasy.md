@@ -1,20 +1,21 @@
 ---
 title: Online Porfolio for Endless Fantasy Art
-image: https://picsum.photos/200/300
+image: /src/img/projects/thumbnail-endless-fantasy-art.png
 links:
   - type: url
-    url: www.google.com
+    url: https://www.endless-fantasy-art.com/
   - type: code
-    url: ww.github.com
+    url: https://github.com/LaurentPCaron/endless-fantasy
 technologies:
-  - html
-  - css
-  - astro
+  - Astro
+  - Vue
+  - Sass
+  - Tailwind
+  - Amazon S3
 ---
-
 # Title
 
-FR Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+EN Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
 tempore facere quia eos asperiores quam reprehenderit reiciendis minus
 labore, animi sit itaque facilis dolorum enim? Deleniti, porro natus!
 Facere, sit. Cumque, modi voluptatum. Assumenda ea, in optio iste

@@ -1,9 +1,9 @@
 ---
 title: "Porfolio en ligne pour Endless Fantasy Art "
-image: ../../src/img/projects/mountain-1920x080-national-park-wallpaper-preview.jpg
+image: /src/img/projects/thumbnail-endless-fantasy-art.png
 links:
   - type: url
-    url: https://www.endless-fantasy-art.com/
+    url: https://www.endless-fantasy-art.com/fr
   - type: code
     url: https://github.com/LaurentPCaron/endless-fantasy
 technologies:
