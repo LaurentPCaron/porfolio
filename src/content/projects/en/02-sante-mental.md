@@ -1,15 +1,14 @@
 ---
-title: Projet Fr
-image: https://picsum.photos/200/300
+title: Je cultive mon bien-être
+image: /img/projects/logo_1.png
 links:
   - type: url
-    url: www.google.com
-  - type: code
-    url: ww.github.com
+    url: https://santementalepositive.e-a-v.ca/
 technologies:
-  - html
-  - css
-  - astro
+  - Astro
+  - Markdown
+  - Tailwind
+  - SASS
 ---
 
 # Title
