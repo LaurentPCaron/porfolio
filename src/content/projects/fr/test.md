@@ -1,13 +1,17 @@
 ---
-title: Test FR
-image: https://environmentamerica.org/wp-content/uploads/2023/05/Flat-Country-credit-Cascadia-Wildlands-DSC_4323.jpeg
+title: Une école équitable et inclusif & Droit de la personne
+image: /img/projects/equite-thumbail.png
 links:
-  - type: url
-    url: www.google.com
   - type: code
-    url: ww.github.com
+    url: https://equite.e-a-v.ca/
 technologies:
-  - HTML
-  - CSS
+  - Vue
+  - Nuxt
+  - SASS
+  - JSON
 ---
-TEST
+Sites Internets développés conjointement visant les professeurs franco-ontarien. Les sites contiennent des ressources pour supporter les professeurs en matière de droit de la personne et d’écimer en milieu scolaire.
+
+**Rôles:** Responsable du développement frontend et médiatisation de la partie “Continuum” et introduction ainsi que du site “Droit de la personne”.
+
+*© Le Centre Franco*
