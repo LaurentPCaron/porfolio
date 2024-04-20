@@ -15,9 +15,14 @@ const { title, image, links, technologies, Content } = Astro.props
 
 <div class="card w-full overflow-hidden rounded-md bg-zinc-800 shadow-md md:flex md:h-80">
 	<!--Image -->
-	<div class="trapeze h-48 w-full md:h-auto md:w-3/12">
+	<a
+		class="trapeze block h-60 w-full md:h-auto md:w-5/12"
+		href={links[0].url}
+		target="_blank"
+		rel="noopener noreferrer"
+	>
 		<img class="h-full w-full object-cover" src={image} alt="" />
-	</div>
+	</a>
 
 	<!--Content -->
 	<div class="my-4 px-5 md:w-9/12">
