@@ -7,7 +7,7 @@ links:
 technologies:
   - Vue
   - Nuxt
-  - SCSS
+  - SASS
   - JSON
 ---
 

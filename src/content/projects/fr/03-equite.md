@@ -7,7 +7,7 @@ links:
 technologies:
   - Vue
   - Nuxt
-  - SCSS
+  - SASS
   - JSON
 ---
 Dictionnaire en ligne du Langage des Signes du Québec. Le site est un catalogue de différents mots et phrase signé illustré par des images et/ou vidéo pour faciliter l’apprentissage du langage des signes.
