@@ -6,8 +6,8 @@ collections:
   - name: 'projects-fr' # Used in routes, e.g., /admin/collections/blog
     label: 'Projets' # Used in the UI
     folder: 'src/content/projects' # The path to the folder where the documents are stored
-    media_folder: '/src/img/projects'
-    public_folder: '/src/img/projects'
+    media_folder: 'src/img/projects'
+    public_folder: 'src/img/projects'
     create: true # Allow users to create new documents in this collection
     i18n: true
     fields:
