@@ -1,6 +1,6 @@
 ---
 title: "Porfolio en ligne pour Endless Fantasy Art "
-image: /src/img/projects/profil.png
+image: src/img/projects/profil.png
 links:
   - type: url
     url: https://www.endless-fantasy-art.com/fr
