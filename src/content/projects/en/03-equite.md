@@ -1,15 +1,14 @@
 ---
-title: Projet Fr
-image: https://picsum.photos/200/300
+title: Dico LSQ
+image: /img/projects/lsq-thumbnail.png
 links:
   - type: url
-    url: www.google.com
-  - type: code
-    url: ww.github.com
+    url: https://dico-lsq.e-a-v.ca/
 technologies:
-  - html
-  - css
-  - astro
+  - Vue
+  - Nuxt
+  - SCSS
+  - JSON
 ---
 
 # Title
