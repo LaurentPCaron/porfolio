@@ -11,12 +11,12 @@ import Score from './Score.astro'
 		<!--Rectangle de carré -->
 		<div class="flex w-full flex-col items-center">
 			<Score class="mt-10 w-full max-w-[60rem] md:w-[55%]" />
-			<TitleBox class="max-w-4xl md:w-10/12 lg:w-6/12" />
+			<TitleBox class="max-w-4xl md:w-10/12 xl:w-6/12" />
 		</div>
 		<!-- Appel à l'action -->
 		<a
 			class="mx-auto mb-14 flex w-fit flex-col justify-center text-center text-5xl text-white"
-			href="#"
+			href="#projects"
 		>
 			<span class="underline">Start</span>
 			<span class="mt-2 animate-bounce"><i class="fa-solid fa-angle-down"></i></span>
@@ -26,7 +26,7 @@ import Score from './Score.astro'
 <style lang="scss" scoped>
 	.bg-image {
 		width: 5760px;
-		background: url('img/hero-bg.png') repeat-x;
+		background: url('/img/hero-bg.png') repeat-x;
 		animation: slide-bg 60s linear infinite;
 	}
 

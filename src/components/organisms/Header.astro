@@ -15,9 +15,13 @@ const nav = {
 		{ label: t('ui.contact'), href: '#contact' }
 	],
 	external: [
-		{ label: 'LinkedIn', href: '#projects', icon: 'fa-brands fa-linkedin-in' },
-		{ label: 'Git Hub', href: '#about', icon: 'fa-brands fa-github' },
-		{ label: 'Couriel ', href: '#contact', icon: 'fa-solid fa-envelope' },
+		{
+			label: 'LinkedIn',
+			href: 'https://www.linkedin.com/in/laurent-philippe-caron/',
+			icon: 'fa-brands fa-linkedin-in'
+		},
+		{ label: 'Git Hub', href: 'https://github.com/LaurentPCaron', icon: 'fa-brands fa-github' },
+		{ label: 'Couriel ', href: 'mailto:info@laurentpcaron.ninja', icon: 'fa-solid fa-envelope' },
 		{ label: 'Fr', href: translatePath('/', 'fr'), haveSeparator: true },
 		{ label: 'En', href: translatePath('/', 'en') }
 	]
@@ -27,7 +31,7 @@ const nav = {
 <header class="fixed top-0 z-10 h-14 w-full bg-black px-4 py-2 text-white">
 	<nav class="container mx-auto flex h-full items-center justify-between">
 		<div class="flex w-full items-center gap-5">
-			<a class="flex items-center gap-5" href="#">
+			<a class="flex items-center gap-5" href="#top">
 				<img
 					class="h-10"
 					src="https://www.trashedgraphics.com/wp-content/uploads/2012/02/default_icon-778x584.jpg"

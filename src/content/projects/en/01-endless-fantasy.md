@@ -1,6 +1,6 @@
 ---
 title: Online Porfolio for Endless Fantasy Art
-image: /src/img/projects/thumbnail-endless-fantasy-art.png
+image: /img/projects/thumbnail-endless-fantasy-art.png
 links:
   - type: url
     url: https://www.endless-fantasy-art.com/
@@ -13,6 +13,7 @@ technologies:
   - Tailwind
   - Amazon S3
 ---
+
 # Title
 
 EN Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor

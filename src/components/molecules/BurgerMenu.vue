@@ -9,7 +9,7 @@
 			@[isOpen&&`click`]="togglingMenu"
 		></div>
 		<div
-			class="fixed right-0 top-0 flex h-screen w-full justify-end bg-brown pr-10 transition-all duration-700"
+			class="fixed right-0 top-0 flex h-screen w-full justify-end bg-black pr-10 transition-all duration-700"
 			:class="isOpen ? 'translate-x-0' : 'translate-x-full'"
 		>
 			<div class="flex w-full flex-col">
@@ -95,7 +95,7 @@ export default {
 
 <style lang="scss" scoped>
 a {
-	@apply flex  h-full items-center;
+	@apply flex h-full items-center;
 }
 li {
 	@apply text-4xl;

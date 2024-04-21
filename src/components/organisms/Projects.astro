@@ -10,7 +10,10 @@ const allBlogPosts = await getCollection('projects', ({ id }) => {
 })
 ---
 
-<div class="container mx-auto">
+<div class="container relative mx-auto">
+	<!--div invisble pour navaigation -->
+	<div id="projects" class="nav-anchor"></div>
+
 	<h2 class="ml-2 md:m-0">Mes projets</h2>
 
 	<div class="grid grid-cols-1 gap-16">
@@ -19,6 +22,7 @@ const allBlogPosts = await getCollection('projects', ({ id }) => {
 				const x = async () => {
 					return await (
 						<Card
+							class={allBlogPosts.length > 1 ? 'ordering' : 'justify-center'}
 							Content={(await render()).Content}
 							image={data.image}
 							links={data.links}
@@ -35,4 +39,8 @@ const allBlogPosts = await getCollection('projects', ({ id }) => {
 
 <!-- -->
 
-<style lang="scss" scoped></style>
+<style lang="scss" is:global>
+	.ordering:nth-child(2n) {
+		justify-self: end;
+	}
+</style>

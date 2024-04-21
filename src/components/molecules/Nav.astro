@@ -18,7 +18,7 @@ const { nav, class: className } = Astro.props
 			nav.map(({ href, label, icon, haveSeparator }) => (
 				<li>
 					{icon ? (
-						<a href={href} target="_blank" rel="noopener noreferrer" title={label}>
+						<a href={href} rel="noopener noreferrer" title={label}>
 							<i class={icon} />
 						</a>
 					) : (

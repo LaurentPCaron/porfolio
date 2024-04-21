@@ -5,6 +5,7 @@
 html {
 	color: white;
 	background: #000;
+	scroll-behavior: smooth;
 }
 
 h1,
@@ -27,4 +28,8 @@ a:not([class]) {
 	&:hover {
 		@apply border-current;
 	}
+}
+
+.nav-anchor {
+	@apply invisible absolute -top-14;
 }
