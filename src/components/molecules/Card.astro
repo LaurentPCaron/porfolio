@@ -14,16 +14,19 @@ interface Props {
 const { title, image, links, technologies, Content, class: className = '' } = Astro.props
 ---
 
-<div
-	class={`card w-full justify-between overflow-hidden rounded-md bg-zinc-800 shadow-md lg:flex ${className}`}
->
+<div class={`flex flex-col w-full overflow-hidden rounded-md bg-zinc-800 shadow-md  ${className}`}>
 	<!--Image -->
-	<a class="trapeze block w-7/12" href={links[0].url} target="_blank" rel="noopener noreferrer">
+	<a
+		class="trapeze block aspect-video h-auto w-full"
+		href={links[0].url}
+		target="_blank"
+		rel="noopener noreferrer"
+	>
 		<img class="h-full w-full object-cover" src={image} alt="" />
 	</a>
 
 	<!--Content -->
-	<div class="my-4 w-5/12 px-5">
+	<div class="my-4 flex-auto px-5">
 		<div class="flex h-full flex-col gap-3">
 			<h3>{title}</h3>
 			<div class="flex flex-wrap gap-5 text-xl text-gray-500">
@@ -31,7 +34,7 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 			</div>
 			<span class="block h-1 w-12 rounded-full bg-white"></span>
 
-			<div class="content flex flex-col gap-y-2">
+			<div class="content mb-5 flex flex-col gap-y-2">
 				<Content />
 			</div>
 
@@ -44,7 +47,7 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 </div>
 
 <style lang="scss" scoped>
-	@screen lg {
+	/* @screen lg {
 		.card .trapeze {
 			clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 90% 100%);
 		}
@@ -55,5 +58,5 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 				clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 100% 100%);
 			}
 		}
-	}
+	} */
 </style>

@@ -16,13 +16,13 @@ const allBlogPosts = await getCollection('projects', ({ id }) => {
 
 	<h2 class="ml-2 md:m-0">Mes projets</h2>
 
-	<div class="grid auto-rows-fr grid-cols-1 gap-x-14 gap-y-10 lg:grid-cols-12">
+	<div class="grid grid-cols-12 gap-x-5 gap-y-10">
 		{
 			allBlogPosts.map(({ data, render }) => {
 				const x = async () => {
 					return await (
 						<Card
-							class="lg:col-span-9"
+							class="col-span-12 md:col-span-6 lg:col-span-4"
 							Content={(await render()).Content}
 							image={data.image}
 							links={data.links}
