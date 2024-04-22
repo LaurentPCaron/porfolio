@@ -15,20 +15,15 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 ---
 
 <div
-	class={`card w-full max-w-7xl justify-between overflow-hidden rounded-md bg-zinc-800 shadow-md lg:flex lg:h-80 ${className}`}
+	class={`card w-full justify-between overflow-hidden rounded-md bg-zinc-800 shadow-md lg:flex ${className}`}
 >
 	<!--Image -->
-	<a
-		class="trapeze block aspect-video w-full lg:h-80 lg:w-[26rem]"
-		href={links[0].url}
-		target="_blank"
-		rel="noopener noreferrer"
-	>
+	<a class="trapeze block w-7/12" href={links[0].url} target="_blank" rel="noopener noreferrer">
 		<img class="h-full w-full object-cover" src={image} alt="" />
 	</a>
 
 	<!--Content -->
-	<div class="my-4 px-5 lg:w-9/12">
+	<div class="my-4 w-5/12 px-5">
 		<div class="flex h-full flex-col gap-3">
 			<h3>{title}</h3>
 			<div class="flex flex-wrap gap-5 text-xl text-gray-500">
@@ -36,12 +31,12 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 			</div>
 			<span class="block h-1 w-12 rounded-full bg-white"></span>
 
-			<div class="content flex flex-col gap-y-2 lg:h-2/4 lg:overflow-y-auto">
+			<div class="content flex flex-col gap-y-2">
 				<Content />
 			</div>
 
 			<!--Tags -->
-			<div class="flex flex-wrap gap-x-8 gap-y-3">
+			<div class="mt-auto flex flex-wrap gap-x-8 gap-y-3">
 				{technologies.map((t) => <Tag label={t} />)}
 			</div>
 		</div>
@@ -49,13 +44,16 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 </div>
 
 <style lang="scss" scoped>
-	/* 	@screen lg {
+	@screen lg {
 		.card .trapeze {
-			clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 85% 100%);
+			clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 90% 100%);
 		}
-		.card:nth-child(2n) .trapeze {
-			order: 1;
-			clip-path: polygon(0% 100%, 15% 0%, 100% 0%, 100% 100%);
+		.card:nth-child(2n) {
+			@apply col-end-12;
+			& .trapeze {
+				order: 1;
+				clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 100% 100%);
+			}
 		}
-	} */
+	}
 </style>
