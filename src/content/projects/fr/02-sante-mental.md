@@ -12,6 +12,6 @@ technologies:
 ---
 Ressource Web sur la santé mental visant les professeurs et les étudiants franco-ontarien de la 1<sup>ère</sup> à la 12<sup>e</sup> année. 
 
-**Rôles**: Responsable du développement frontend et de la médiatisation du projet.
+**Rôle**: Responsable du développement frontend et de la médiatisation du projet.
 
 *© Le Centre Franco*
