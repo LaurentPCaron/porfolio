@@ -9,5 +9,10 @@ technologies:
   - Nuxt
   - SASS
   - JSON
+  - Bootstrap
 ---
-TEST
+Two websites developed simultaneously for Franco-Ontarian teachers. The websites contain multiple resources to help teachers with subjects such as human rights and equity in education.
+
+**Role:** Development and content integration of the "Continuum", "Introduction" and "Droits de la personne" sections.
+
+*© Le Centre Franco*
