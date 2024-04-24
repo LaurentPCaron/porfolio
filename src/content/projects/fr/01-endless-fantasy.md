@@ -13,6 +13,6 @@ technologies:
   - Tailwind
   - Amazon S3
 ---
-Site Internet portfolio bilingue designer pour une designer graphique et illustratrice. Le site expose différents projets professionnels ainsi que le trajet professionnel et contacts. 
+Commande pour un Site Internet portfolio bilingue pour une graphiste et illustratrice. Le site présente différents projets professionnels, contactes ainsi que d’autres informations professionnelles. 
 
-**Rôles:** Responsable du développement, de la médiatisation, du déploiement ainsi que du support.
+**Rôles:** Responsable du développement, de l'intégration du contenu et du déploiement.
