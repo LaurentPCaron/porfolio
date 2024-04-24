@@ -15,4 +15,4 @@ technologies:
 ---
 Commission for a bilingual website for a graphic designer and illustrator. The website showcased various professional projects, contacts and other professional information.
 
-**Roles:** Development, content integration and deployment.
+**Role:** Development, content integration and deployment.

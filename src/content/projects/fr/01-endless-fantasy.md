@@ -15,4 +15,4 @@ technologies:
 ---
 Commande pour un Site Internet portfolio bilingue pour une graphiste et illustratrice. Le site présente différents projets professionnels, contactes ainsi que d’autres informations professionnelles. 
 
-**Rôles:** Responsable du développement, de l'intégration du contenu et du déploiement.
+**Rôle:** Responsable du développement, de l'intégration du contenu et du déploiement.
