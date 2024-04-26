@@ -17,7 +17,7 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 <div class={`flex flex-col w-full overflow-hidden rounded-md bg-zinc-800 shadow-md  ${className}`}>
 	<!--Image -->
 	<a
-		class="trapeze block aspect-video h-auto w-full"
+		class="trapeze block h-72 w-full"
 		href={links[0].url}
 		target="_blank"
 		rel="noopener noreferrer"
@@ -39,7 +39,7 @@ const { title, image, links, technologies, Content, class: className = '' } = As
 			</div>
 
 			<!--Tags -->
-			<div class="mt-auto flex flex-wrap gap-x-8 gap-y-3">
+			<div class="mt-auto flex flex-wrap gap-x-5 gap-y-3">
 				{technologies.map((t) => <Tag label={t} />)}
 			</div>
 		</div>
