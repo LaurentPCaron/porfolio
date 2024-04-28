@@ -13,9 +13,7 @@ const allBlogPosts = await getCollection('projects', ({ id }) => {
 <div class="container relative mx-auto">
 	<!--div invisble pour navaigation -->
 	<div id="projects" class="nav-anchor"></div>
-
 	<h2 class="ml-2 md:m-0">Mes projets</h2>
-
 	<div class="grid grid-cols-12 gap-x-5 gap-y-10">
 		{
 			allBlogPosts.map(({ data, render }) => {
