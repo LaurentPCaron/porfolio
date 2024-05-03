@@ -1,0 +1,25 @@
+---
+import { getLangFromUrl } from '../../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+
+const about = await Astro.glob(`../../content/about/**/*.md`).then((abouts) => {
+	return abouts.find((a) => a.file.includes(`/${lang}/`))?.compiledContent()
+})
+---
+
+<div class="container mx-auto my-10">
+	<h2>À propos</h2>
+	<!--Boite de dialogue -->
+	<div class="bg-ff7 relative mt-64 flex">
+		<!-- profil image-->
+		<div class="absolute bottom-2 aspect-[9/11] w-2/12 bg-slate-100"></div>
+		<!-- Body-->
+		<div class="ml-auto w-10/12 pl-5">
+			<!-- Name Tag-->
+			<p>Laurent-P.</p>
+			<!-- Content -->
+			<div set:html={about} />
+		</div>
+	</div>
+</div>
