@@ -46,12 +46,17 @@ collections:
         i18n: true
         name: 'body'
         widget: 'markdown'
+
   - name: about-fr
     label: 'About' # Used in the UI
-    folder: 'src/content/about' # The path to the folder where the documents are stored
+    folder: 'src/content/about/' # The path to the folder where the documents are stored
     create: false
     i18n: true
     fields:
+      - label: 'Titre'
+        name: 'title'
+        widget: 'string'
+        i18n: true
       - label: 'Body'
         i18n: true
         name: 'body'
