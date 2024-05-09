@@ -3,7 +3,7 @@ i18n:
   locales: [fr, en]
 
 collections:
-  - name: 'projects-fr' # Used in routes, e.g., /admin/collections/blog
+  - name: 'project' # Used in routes, e.g., /admin/collections/blog
     label: 'Projets' # Used in the UI
     folder: 'src/content/projects' # The path to the folder where the documents are stored
     media_folder: '/public/img/projects'
@@ -47,9 +47,9 @@ collections:
         name: 'body'
         widget: 'markdown'
 
-  - name: about-fr
+  - name: about
     label: 'About' # Used in the UI
-    folder: 'src/content/about' # The path to the folder where the documents are stored
+    folder: 'src/content/about-me' # The path to the folder where the documents are stored
     create: true
     i18n: true
     fields:
