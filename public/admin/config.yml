@@ -50,7 +50,7 @@ collections:
   - name: about-fr
     label: 'About' # Used in the UI
     folder: 'src/content/about/' # The path to the folder where the documents are stored
-    create: false
+    create: true
     i18n: true
     fields:
       - label: 'Titre'
