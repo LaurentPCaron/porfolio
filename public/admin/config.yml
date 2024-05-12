@@ -49,8 +49,8 @@ collections:
 
   - name: about
     label: 'About' # Used in the UI
-    folder: 'src/content/about/{{locale}}' # The path to the folder where the documents are stored
-    create: false
+    folder: 'src/content/about-me/{{locale}}' # The path to the folder where the documents are stored
+    create: true
     i18n: true
     fields:
       - label: 'Titre'

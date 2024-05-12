@@ -3,7 +3,7 @@ import { getLangFromUrl } from '../../i18n/utils'
 
 const lang = getLangFromUrl(Astro.url)
 
-const about = await Astro.glob(`../../content/about/**/*.md`).then((abouts) => {
+const about = await Astro.glob(`../../content/about-me/**/*.md`).then((abouts) => {
 	return abouts.find((a) => a.file.includes(`/${lang}/`))?.compiledContent()
 })
 ---
