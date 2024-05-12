@@ -48,7 +48,7 @@ collections:
         widget: 'markdown'
   - name: about-fr
     label: 'About' # Used in the UI
-    folder: 'src/content/about' # The path to the folder where the documents are stored
+    folder: 'src/content/about/{{locale}}' # The path to the folder where the documents are stored
     create: false
     i18n: true
     fields:
