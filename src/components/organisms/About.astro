@@ -8,18 +8,26 @@ const about = await Astro.glob(`../../content/apropos/**/*.md`).then((abouts) =>
 })
 ---
 
-<div class="container mx-auto my-10">
-	<h2 id="about">À propos</h2>
-	<!--Boite de dialogue -->
-	<div class="bg-ff7 relative mt-5 flex">
-		<!-- profil image-->
-		<div class="absolute bottom-2 aspect-[9/11] w-2/12 bg-slate-100"></div>
-		<!-- Body-->
-		<div class="ml-auto w-10/12 pl-5">
-			<!-- Name Tag-->
-			<h3 class="mb-5">Laurent-P.</h3>
-			<!-- Content -->
-			<div class="about--body" set:html={about} />
+<div class="mx-auto my-10">
+	<h2 class="mx-auto max-w-[1536px]" id="about">À propos</h2>
+	<div class="h-full bg-[url(/img/bg-2.png)] pb-28 sm:pt-44">
+		<!--Boite de dialogue -->
+		<div class="bg-ff7 container relative mx-auto flex h-auto">
+			<!-- profil image-->
+			<img
+				class="absolute bottom-0 hidden object-cover sm:h-5/6 md:-left-48 md:inline md:h-[calc(100%+200px)] lg:-left-32"
+				src="/img/avatar.png"
+				alt=""
+			/>
+			<!-- Body-->
+			<div class="ml-auto w-auto md:pl-80">
+				<!-- Name Tag-->
+				<h3 class="mb-5">Laurent-P.</h3>
+				<!-- Content -->
+				<!-- profil image-->
+				<img class="md:hidden" src="/img/avatar.png" alt="" />
+				<div class="about--body" set:html={about} />
+			</div>
 		</div>
 	</div>
 </div>
