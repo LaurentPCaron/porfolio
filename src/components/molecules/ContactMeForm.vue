@@ -1,13 +1,17 @@
 <template>
-	<form class="mx-auto flex max-w-3xl flex-col gap-y-5" @submit.prevent="submitForm" ref="form">
+	<form
+		class="mx-auto flex max-w-3xl flex-col border border-white p-10"
+		@submit.prevent="submitForm"
+		ref="form"
+	>
 		<label for="name">Nom</label>
-		<input type="text" name="name" v-model="name" required />
+		<input type="text" name="name" v-model="name" reqautocomplete="off" uired />
 		<label for="email">Adresse couriel</label>
-		<input type="email" name="email" v-model="email" required />
+		<input type="email" name="email" v-model="email" autocomplete="off" required />
 		<label for="message">Message</label>
 		<textarea name="message" v-model="message" rows="5" required></textarea>
 		<div class="h-captcha" data-captcha="true" ref="captcha"></div>
-		<button type="submit">Envoyé message</button>
+		<button type="submit">Envoyer message</button>
 	</form>
 	<button class="text-white" @click="openModal">test</button>
 
@@ -15,17 +19,11 @@
 		<div class="flex flex-col">
 			<h2 class="w-fit">Merci!</h2>
 			<p>J'ai bien ressus votre message et je vous repondrai le plus rapidement possible.</p>
-			<p>Vous pouvez aussi me contacter en m'écrivant à : <br /></p>
+			<p>Vous pouvez aussi me contacter en m'écrivant à :</p>
 			<a class="mx-auto my-10 block underline" href="mailto:info@lpcaron.ninja"
 				>info@lpcaron.ninja</a
 			>
-			<button
-				class="hover: mx-auto h-10 w-40 rounded-md border border-black bg-white text-black"
-				@click="closeModal"
-				autofocus
-			>
-				Fermer
-			</button>
+			<button @click="closeModal" autofocus>Fermer</button>
 		</div>
 	</dialog>
 </template>
@@ -79,5 +77,20 @@ const closeModal = () => {
 input,
 textarea {
 	@apply text-black;
+}
+
+button {
+	@apply mx-auto h-10 w-40 rounded-md border border-black bg-white text-black;
+}
+form {
+	& input,
+	textarea,
+	.h-captcha {
+		@apply mb-5;
+	}
+}
+
+::backdrop {
+	@apply bg-black opacity-70;
 }
 </style>
