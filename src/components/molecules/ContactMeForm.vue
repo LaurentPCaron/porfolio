@@ -9,10 +9,24 @@
 		<div class="h-captcha" data-captcha="true" ref="captcha"></div>
 		<button type="submit">Envoyé message</button>
 	</form>
+	<button class="text-white" @click="openModal">test</button>
 
-	<dialog ref="modal">
-		<button autofocus>Close</button>
-		<p>This modal dialog has a groovy backdrop!</p>
+	<dialog class="bg-ff7 text-white" ref="modal">
+		<div class="flex flex-col">
+			<h2 class="w-fit">Merci!</h2>
+			<p>J'ai bien ressus votre message et je vous repondrai le plus rapidement possible.</p>
+			<p>Vous pouvez aussi me contacter en m'écrivant à : <br /></p>
+			<a class="mx-auto my-10 block underline" href="mailto:info@lpcaron.ninja"
+				>info@lpcaron.ninja</a
+			>
+			<button
+				class="hover: mx-auto h-10 w-40 rounded-md border border-black bg-white text-black"
+				@click="closeModal"
+				autofocus
+			>
+				Fermer
+			</button>
+		</div>
 	</dialog>
 </template>
 
@@ -50,6 +64,14 @@ const submitForm = async () => {
 		console.log(result)
 		modal.value?.showModal()
 	}
+}
+
+const openModal = () => {
+	modal.value?.showModal()
+}
+
+const closeModal = () => {
+	modal.value?.close()
 }
 </script>
 
