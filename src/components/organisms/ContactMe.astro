@@ -1,8 +1,13 @@
 ---
 import ContactMeForm from '../molecules/ContactMeForm.vue'
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div class="container relative mx-auto">
-	<h2 id="contact">Contactez-moi</h2>
-	<ContactMeForm client:only />
+	<h2 id="contact">{t('ui.contact')}</h2>
+	<ContactMeForm class="pb-10" client:only />
 </div>

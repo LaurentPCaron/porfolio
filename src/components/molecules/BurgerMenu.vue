@@ -33,7 +33,7 @@
 						<a class="py-5 pl-5" :href="href" @click="togglingMenu">{{ label }}</a>
 					</li>
 				</ul>
-				<ul class="mt-5 flex gap-7 pl-5 text-3xl">
+				<ul class="mt-5 flex flex-wrap gap-7 pl-5 text-3xl">
 					<li class="flex" v-for="{ href, label, icon, haveSeparator } in externals" :key="href">
 						<a :href="href" target="_blank" rel="noopener noreferrer" :title="label" ref="element"
 							><i v-if="icon" :class="icon"></i> <span v-else>{{ label }}</span></a

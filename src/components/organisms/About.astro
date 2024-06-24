@@ -1,7 +1,8 @@
 ---
-import { getLangFromUrl } from '../../i18n/utils'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
 
 const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 const about = await Astro.glob(`../../content/apropos/**/*.md`).then((abouts) => {
 	return abouts.find((a) => a.file.includes(`/${lang}/`))?.compiledContent()
@@ -9,10 +10,11 @@ const about = await Astro.glob(`../../content/apropos/**/*.md`).then((abouts) =>
 ---
 
 <div class="mx-auto my-10">
-	<h2 class="mx-auto max-w-[1536px]" id="about">À propos</h2>
+	<h2 class="mx-auto max-w-[1536px]" id="about">{t('ui.about')}</h2>
+
 	<div class="h-full bg-[url(/img/bg-2.png)] pb-28 sm:pt-44">
 		<!--Boite de dialogue -->
-		<div class="bg-ff7 container relative mx-auto flex h-auto">
+		<div class="bg-ff7 container relative mx-auto flex h-auto w-[97%]">
 			<!-- profil image-->
 			<img
 				class="absolute bottom-0 hidden object-cover sm:h-5/6 md:-left-48 md:inline md:h-[calc(100%+200px)] lg:-left-32"
@@ -35,5 +37,8 @@ const about = await Astro.glob(`../../content/apropos/**/*.md`).then((abouts) =>
 <style is:global>
 	.about--body > p {
 		@apply mb-2;
+	}
+	.about--body a {
+		@apply border-b-2 border-white;
 	}
 </style>

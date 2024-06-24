@@ -1,9 +1,10 @@
 ---
 import Card from '../molecules/Card.astro'
 import { getCollection } from 'astro:content'
-import { getLangFromUrl } from '../../i18n/utils'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
 
 const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 const allBlogPosts = await getCollection('projects', ({ id }) => {
 	return id.startsWith(`${lang}/`)
@@ -11,7 +12,7 @@ const allBlogPosts = await getCollection('projects', ({ id }) => {
 ---
 
 <div class="container mx-auto">
-	<h2 id="projects" class="ml-2 md:m-0">Mes projets</h2>
+	<h2 id="projects" class="md:m-0">{t('ui.projets')}</h2>
 	<div class="grid grid-cols-12 gap-x-5 gap-y-10">
 		{
 			allBlogPosts.map(({ data, render }) => {
