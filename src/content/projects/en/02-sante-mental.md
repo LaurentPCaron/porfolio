@@ -10,8 +10,9 @@ technologies:
   - Tailwind
   - SASS
 ---
-A web resource about mental wellness targeted to Franco-Ontarian teachers and students from 1<sup>st</sup> to 12<sup>th</sup> grade. 
 
-**Role:** Development and content integration 
+A web resource about mental wellness targeted to Franco-Ontarian teachers and students from 1<sup>st</sup> to 12<sup>th</sup> grade.
 
-*© Le Centre Franco*
+**Role:** Development and content integration
+
+_© Le Centre Franco_

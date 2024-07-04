@@ -13,6 +13,7 @@ technologies:
   - Tailwind
   - Amazon S3
 ---
-Commission for a bilingual website for a graphic designer and illustrator. The website showcased various professional projects, contacts and other professional information.
+
+A commission for a bilingual website for a graphic designer and illustrator. The website showcases various professional projects, contact and professional information.
 
 **Role:** Development, content integration and deployment.
