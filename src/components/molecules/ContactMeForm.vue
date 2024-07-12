@@ -90,7 +90,7 @@ const submitForm = async () => {
 	resetForm()
 }
 const validateForm = () => {
-	const emailReg = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+	const emailReg = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]$/
 	const required = t('ui.require')
 
 	errorMessages.value.name = ''
