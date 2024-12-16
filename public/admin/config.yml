@@ -61,5 +61,6 @@ media_folder: 'src/img'
 public_folder: 'src/img'
 
 backend:
-  name: github
+  name: git-gateway
+  branch: main
   repo: LaurentPCaron/porfolio # Path to your GitHub repository
