@@ -1,7 +1,6 @@
 ---
 title: about
 ---
-
 Hey sup!
 
 I’m a coffee addicted front-end Web developer living in Montreal, Canada. I worked and cooperated on numerous types of websites like portfolios, media websites and educational resources.
@@ -12,4 +11,4 @@ While I’m not codding, I kill time by playing indie and old school games or by
 
 I’m looking forward to speaking with you!
 
-P.S. The one eyed fur ball is named Cinder and yes, she’s adorable.
+P.S. The one eyed fur ball is named Cinder and yes, she’s very adorable.

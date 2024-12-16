@@ -1,7 +1,6 @@
 ---
 title: about
 ---
-
 Hey salut!
 
 Je suis programmeur web front-end accros au café basé à Montréal, Canada. J’ai travaillé et coopéré au développement de plusieurs types de sites web tel que portfolio, médiatiques ou éducatifs.
@@ -12,4 +11,4 @@ Lorsque je ne suis pas en train de coder, je passe mon temps soit à jouer à de
 
 Au plaisir d’entrer en contact avec vous.
 
-P.S. La boule de poils à un œil s'appelle Cinder et oui, elle est adorable.
+P.S. La boule de poils à un œil s'appelle Cinder et oui, elle est très adorable.
