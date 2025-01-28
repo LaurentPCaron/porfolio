@@ -12,8 +12,49 @@ import Cartrige from '../../components/molecules/Cartrige.astro'
 	<div class="w-full justify-center bg-white py-10">
 		<!-- <Cartrige /> -->
 
-		<!--Tv -->
-		<div class="aspect-[13/10] w-[800px] border-[20px] border-gray-600 bg-red-800"></div>
+		<!--card -->
+		<div class="w-[22rem] h-[30.5rem] bg-red-500 border-[14px] border-yellow-500 rounded-xl bg-[url(/img/metallic-texture.jpg)] p-3 text-black ">
+			<!--Title -->
+			<h3 class=" text-4xl h-[10%] uppercase text-center bg-amber-400 bg-opacity-80 border-amber-500 border-[3px] border-t-amber-200 border-l-amber-300">Title</h3>
+			<!--Subtitle -->
+			<div class="my-1 font-bold">Subtitle</div>
+			<!--Thumbnail -->
+			<img class="h-2/5 w-full object-cover mb-3 border-[3px] border-t-zinc-600 border-r-zinc-600 border-zinc-300" src="https://jessup.edu/wp-content/uploads/2024/01/Is-Web-Development-Oversaturated.jpg" alt="">
+			<!--Description -->
+			<div class="relative h-2/5 bg-zinc-100 bg-opacity-70 box-border py-5 px-4 mb-2 overflow-hidden border-[3px] border-b-zinc-400 border-r-zinc-400 border-zinc-100">
+				<span class="octagon top-1 left-1"/>
+				<span class="octagon right-1 top-1"/>
+				<p class="font-bold leading-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolorem esse atque sequi. </p>
+				<span class="octagon left-1 bottom-1"/>
+				<span class="octagon right-1 bottom-1"/>
+			</div>
+		</div>
 	</div>
+
+	
 	<Footer />
 </Layout>
+
+<style lang="scss">
+	.octagon{
+		@apply grid w-4 aspect-square;
+        position: absolute;
+        overflow: hidden;
+		
+		&:before {
+			position: absolute;
+        	top: 0; right: 0; bottom: 0; left: 0;
+        	transform: rotate(45deg);
+			background: rgb(255,255,255);
+			background: radial-gradient(circle at 20%, rgba(255,255,255,1) 0%, rgb(117, 117, 117) 40%); 
+        	content: '';
+        }
+
+		&:after {
+			@apply w-2/3 h-[1px] bg-zinc-400 self-center place-self-center -rotate-45;
+			position: absolute;
+        	content: '';
+		}
+
+	}
+</style>
